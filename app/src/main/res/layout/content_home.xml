@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home"
+    tools:showIn="@layout/app_bar_home">
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/viewtable">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="62dp"
+                        android:padding="5dip"
+                        android:text="Name" />
+
+                    <TextView
+                        android:id="@+id/power"
+                        android:layout_width="62dp"
+                        android:padding="5dip"
+                        android:text="Power" />
+
+                    <TextView
+                        android:id="@+id/pump"
+                        android:layout_width="56dp"
+                        android:padding="5dip"
+                        android:text="Pump" />
+
+                    <TextView
+                        android:id="@+id/ON1"
+                        android:layout_width="wrap_content"
+                        android:padding="5dip"
+                        android:text="Shift1 ON" />
+
+                    <TextView
+                        android:id="@+id/OFF1"
+                        android:layout_width="104dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dip"
+                        android:text="Shift1 OFF" />
+
+                    <TextView
+                        android:id="@+id/ON2"
+                        android:layout_width="wrap_content"
+                        android:padding="5dip"
+                        android:text="Shift2 ON" />
+
+                    <TextView
+                        android:id="@+id/OFF2"
+                        android:layout_width="104dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dip"
+                        android:text="Shift2 OFF" />
+
+                </TableRow>
+
+            </TableLayout>
+        </LinearLayout>
+        </HorizontalScrollView>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
