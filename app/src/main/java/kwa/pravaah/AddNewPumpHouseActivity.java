@@ -93,7 +93,6 @@ public class AddNewPumpHouseActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Context context=getApplicationContext();
 
         if (id == R.id.home) {
             Intent i1 = new Intent(AddNewPumpHouseActivity.this,Home.class);

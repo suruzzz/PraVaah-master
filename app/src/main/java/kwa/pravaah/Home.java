@@ -193,8 +193,7 @@ public class Home extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Context context=getApplicationContext();
-
+     
         if (id == R.id.home) {
             Intent i1 = new Intent(Home.this,Home.class);
             startActivity(i1);

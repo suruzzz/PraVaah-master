@@ -162,8 +162,6 @@ public class AddAlarm extends AppCompatActivity
                                     }
                                 }
                             });
-                            db.addPendingIntent_OFF(num, String.valueOf(alarmID));
-                            db.addTime_OFF(num, time);
 
                         }
                         else {
@@ -203,7 +201,6 @@ public class AddAlarm extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        Context context=getApplicationContext();
 
         if (id == R.id.home) {
             Intent i1 = new Intent(AddAlarm.this,Home.class);
