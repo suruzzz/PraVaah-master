@@ -64,7 +64,7 @@ public class AddAlarm extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        db=new DbManager(this);
+        db=new DbManager(AddAlarm.this);
         final int mValue = db.numOfRows();
         if (mValue == 0) {
             mFlag = true;

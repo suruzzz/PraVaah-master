@@ -40,12 +40,12 @@ public class DbManager extends SQLiteOpenHelper {
                 + PUMP + " text,"
                 + PENDING_INTENT_ON +" text,"
                 + PENDING_INTENT_OFF +" text,"
-                + TIME_ON +" text unique,"
-                + TIME_OFF +" text unique,"
+                + TIME_ON +" text ,"
+                + TIME_OFF +" text ,"
                 + PENDING_INTENT_ON2 +" text,"
                 + PENDING_INTENT_OFF2 +" text,"
-                + TIME_ON2 +" text unique,"
-                + TIME_OFF2 +" text unique)");
+                + TIME_ON2 +" text,"
+                + TIME_OFF2 +" text)");
     }
 
     @Override
