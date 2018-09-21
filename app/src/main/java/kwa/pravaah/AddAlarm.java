@@ -27,6 +27,7 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import java.util.Calendar;
+import java.util.IdentityHashMap;
 
 import kwa.pravaah.database.DbManager;
 
@@ -101,8 +102,9 @@ public class AddAlarm extends AppCompatActivity
                                 public void onCheckedChanged(RadioGroup group, int checkedId) {
                                     View radioButton = rd.findViewById(checkedId);
                                     int index = rd.indexOfChild(radioButton);
-                                    switch (index) {
-                                        case 0: // first button
+                                    int ID = rd.getCheckedRadioButtonId();
+                                  /*  switch (index) {
+                                        case 1: // first button
 
 
                                             db.addPendingIntent_ON(num, String.valueOf(alarmID));
@@ -110,7 +112,7 @@ public class AddAlarm extends AppCompatActivity
                                             Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
 
                                             break;
-                                        case 1: // secondbutton
+                                        case 2: // secondbutton
 
 
                                             db.addPendingIntent_ON2(num, String.valueOf(alarmID));
@@ -118,6 +120,25 @@ public class AddAlarm extends AppCompatActivity
                                             Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
 
                                             break;
+                                    }*/
+
+                                    if (ID == -1)
+                                    {
+                                        Toast.makeText(AddAlarm.this, "Choose a shift ", Toast.LENGTH_SHORT).show();
+                                    }
+                                    else if (ID == R.id.shift_1) // first button
+                                    {
+                                        db.addPendingIntent_ON(num, String.valueOf(alarmID));
+                                        db.addTime_ON(num, time);
+                                        Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                    else if (ID == R.id.shift_2) // secondbutton
+                                    {
+                                        db.addPendingIntent_ON2(num, String.valueOf(alarmID));
+                                        db.addTime_ON2(num, time);
+                                        Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
+
                                     }
                                 }
                             });
@@ -144,22 +165,45 @@ public class AddAlarm extends AppCompatActivity
                             rd.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                                 @Override
                                 public void onCheckedChanged(RadioGroup group, int checkedId) {
-                                    View radioButton = rd.findViewById(checkedId);
-                                    int index = rd.indexOfChild(radioButton);
-                                    switch (index) {
-                                        case 0: // first button
+                                     View radioButton = rd.findViewById(checkedId);
+                                     int index = rd.indexOfChild(radioButton);
+                                    int ID = rd.getCheckedRadioButtonId();
+
+                                  /*  switch (index) {
+                                        case 1: // first button
 
                                             db.addPendingIntent_OFF(num, String.valueOf(alarmID));
                                             db.addTime_OFF(num, time);
                                             Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
                                             break;
-                                        case 1: // secondbutton
+                                        case 2: // secondbutton
 
                                             db.addPendingIntent_OFF2(num, String.valueOf(alarmID));
                                             db.addTime_OFF2(num, time);
                                             Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
                                             break;
+                                    }*/
+                                    if (ID == -1)
+                                    {
+                                        Toast.makeText(AddAlarm.this, "Choose a shift ", Toast.LENGTH_SHORT).show();
                                     }
+                                    else if (ID == R.id.shift_1) // first button
+                                    {
+                                        db.addPendingIntent_OFF(num, String.valueOf(alarmID));
+                                        db.addTime_OFF(num, time);
+                                        Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
+
+                                    }
+                                    else if (ID == R.id.shift_2) // second button
+                                    {
+                                        db.addPendingIntent_OFF2(num, String.valueOf(alarmID));
+                                        db.addTime_OFF2(num, time);
+                                        Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
+
+                                    }
+
+
+
                                 }
                             });
 

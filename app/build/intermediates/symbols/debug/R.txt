@@ -972,8 +972,8 @@ int id search_plate 0x7f0800a3
 int id search_src_text 0x7f0800a4
 int id search_voice_btn 0x7f0800a5
 int id select_dialog_listview 0x7f0800a6
-int id shift1 0x7f0800a7
-int id shift2 0x7f0800a8
+int id shift_1 0x7f0800a7
+int id shift_2 0x7f0800a8
 int id shortcut 0x7f0800a9
 int id showCustom 0x7f0800aa
 int id showHome 0x7f0800ab

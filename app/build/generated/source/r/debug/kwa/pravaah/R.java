@@ -3815,8 +3815,8 @@ public final class R {
     public static final int search_src_text=0x7f0800a4;
     public static final int search_voice_btn=0x7f0800a5;
     public static final int select_dialog_listview=0x7f0800a6;
-    public static final int shift1=0x7f0800a7;
-    public static final int shift2=0x7f0800a8;
+    public static final int shift_1=0x7f0800a7;
+    public static final int shift_2=0x7f0800a8;
     public static final int shortcut=0x7f0800a9;
     public static final int showCustom=0x7f0800aa;
     public static final int showHome=0x7f0800ab;

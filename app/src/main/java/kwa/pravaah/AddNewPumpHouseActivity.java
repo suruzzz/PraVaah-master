@@ -153,7 +153,6 @@ public class AddNewPumpHouseActivity extends AppCompatActivity
             PhoneNo = cursor.getString(phoneIndex);
             Name = cursor.getString(nameIndex);
             // Set the value to the textviews
-            //textView1.setText(name);
             if (PhoneNo.length() == 13)
                 PhoneNo = PhoneNo.substring(3, 13);
             Ph.setText(PhoneNo);
