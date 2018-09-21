@@ -77,7 +77,8 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:paddingHorizontal="20dp"
-                android:paddingVertical="20dp">
+                android:paddingVertical="20dp"
+                android:checkedButton="@id/shift_1">
 
                 <RadioButton
                     android:id="@+id/shift_1"

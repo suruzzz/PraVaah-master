@@ -94,7 +94,7 @@ public class AddAlarm extends AppCompatActivity
 
                         final String num = Phone.getText().toString();
                         if(db.getnumber(num)) {
-                            String PhNo = num + ",2";
+                            final String PhNo = num + ",2";
                             setAlarm(PhNo);
 
                             rd.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -130,6 +130,7 @@ public class AddAlarm extends AppCompatActivity
                                     {
                                         db.addPendingIntent_ON(num, String.valueOf(alarmID));
                                         db.addTime_ON(num, time);
+
                                         Toast.makeText(AddAlarm.this, "Data Updated", Toast.LENGTH_SHORT).show();
 
                                     }
